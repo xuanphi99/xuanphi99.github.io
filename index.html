@@ -1,1100 +1,568 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-	<title> Artica  </title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">  
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=vietnamese" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+<html lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Cv -Đoàn Xuân Phi</title>
+	<meta name="description" content="Blvck - Personal vCard & Resume Template">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
 
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/owl.theme.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" media="all">
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
 
-	<script type="text/javascript" src="vendor/bootstrap.js"></script>
-
-
- 	<script type="text/javascript" src="vendor/isotope.pkgd.min.js"></script>
- 	<script type="text/javascript" src="vendor/imagesloaded.pkgd.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-
- 	<script type="text/javascript" src="1.js"></script>
-
-	<link rel="stylesheet" href="vendor/bootstrap.css">
-	<link rel="stylesheet" href="vendor/font-awesome.css">
-	<link rel="stylesheet" href="1.css">
- </head>
-<body >
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-181052821-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-181052821-1');
-</script>
-
-<!-- login fb -->
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
 	
-		<script>
 
-        // [1] Load lên các thành phần cần thiết
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '865526423983294',
-                cookie: true,
-                xfbml: true,
-                version: 'v8.0'
-            });
-            // Kiểm tra trạng thái hiện tại
-            FB.getLoginStatus(function (response) {
-                statusChangeCallback(response);
-            });
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-        };
+</head>
 
-        // [2] Xử lý trạng thái đăng nhập
-        function statusChangeCallback(response) {
-            // Người dùng đã đăng nhập FB và đã đăng nhập vào ứng dụng
-            if (response.status === 'connected') {
-                ShowWelcome();
-            }
-            // Người dùng đã đăng nhập FB nhưng chưa đăng nhập ứng dụng
-            else if (response.status === 'not_authorized') {
-                ShowLoginButton();
-            }
-            // Người dùng chưa đăng nhập FB
-            else {
-                ShowLoginButton();
-            }
-        }
+<body>
+<!-- Preloader -->
+<div class="preloader-outer">
+	<div class="preloader">
+		<div class="lines">
+			<div class="line line-1"></div>
+			<div class="line line-2"></div>
+			<div class="line line-3"></div>
+		</div>
 
-        // [3] Yêu cầu đăng nhập FB
-        function RequestLoginFB() {
-            window.location = 'http://graph.facebook.com/oauth/authorize?client_id=865526423983294&scope=public_profile,email&redirect_uri=https://xuanphi99.github.io/';
-        }
+		<div class="loading-text">- Loading... -</div>
+	</div>
+</div>
+<!-- Preloader end -->
 
-        // [4] Hiển thị nút đăng nhập
-        function ShowLoginButton() {
-            document.getElementById('btb').setAttribute('style', 'display:block');
-            document.getElementById('lbl').setAttribute('style', 'display:none');
-        }
+<!-- Main Wrapper -->
+<main class="wrapper">
 
-        // [5] Chào mừng người dùng đã đăng nhập
-        function ShowWelcome() {
-            document.getElementById('btb').setAttribute('style', 'display:none');            
-            FB.api('/me', function (response) {
-                var name = response.name;
-                var username = response.username;
-                var id = response.id;
-                document.getElementById('lbl').innerHTML = 'Tên=' + name + ' | username=' + username + ' | id=' + id;
-                document.getElementById('lbl').setAttribute('style', 'display:block');
-            });
-        }
+	<!-- Header -->
+	<header class="header pull-left">
 
-    </script>
-    <div id="fb-root"></div>
-    <script>
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=865526423983294";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+		<!-- Mobile menu -->
+		<div class="mobile-bar visible-sm visible-xs">
+			<div class="hamburger-menu">
+				  <div class="bar"></div>	
+			</div>
+		</div>
+		<!-- Mobile menu end -->
 
+		<div class="avatar">
+			<img src="assets/images/anh34.jpg" alt="avatar">
+		</div>
 
+		<div class="name">
+			<h1>Đoàn Xuân Phi</h1>
+			<span>Thực tập Java-Web</span>
+		</div>
 
-    <!-- NÚT ĐĂNG NHẬP -->
-    <input id="btb" type="button" value="ĐĂNG NHẬP" onclick="RequestLoginFB()" style="display:none" />
-    <p id="lbl" style="display:none">BẠN ĐÃ ĐĂNG NHẬP THÀNH CÔNG!</p>
-    <br />
+		<!-- Social Icons -->
+		<div class="social-icons">
+			<ul>
+				<li><a href="https://www.facebook.com/profile.php?id=100004545765750"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a></li> -->
+			</ul>
+		</div>
+		<!-- Social Icons end -->
 
+		<!-- Navigation bar -->
+		<nav class="main-nav">
+			<ul class="navigation">
+				
+				<li><a href="#about">Giới Thiệu</a></li>
+				<li><a href="#experience">Học Vấn</a></li>
+				<li><a href="#education">Mục Tiêu Nghề Nghiệp</a></li>
+				
+				<li><a href="#skill">Các Kĩ năng</a></li>
+				<li><a href="#works">Kinh Nghiệm Làm Việc</a></li>
+				<li><a href="#activity">Hoạt động</a></li>
+				<li><a href="#favorite">Sở Thích</a></li>
+				
+			</ul>
+		</nav>
+		<!-- Navigation bar end -->
 
+		<!-- Footer Copyright -->
+		<div class="copyright">
+			<span>© Copyright Designstub</span>
+		</div>
+		<!-- Footer Copyright end -->
 
-<!-- hetlogin -->
+	</header>
+	<!-- Header end -->
+
+	<!-- Main Content -->
+	<div class="main-content pull-right">
 
 		
- 	<div class="topheader wow zoomInRight" data-wow-delay="1s">
- 		<div class="container">
- 			<div class="row">
- 				<div class="col-sm-8 wow jello" data-wow-delay="1s">
- 					<div class="mangxh float-sm-left text-xs-center text-sm-left wow shake " data-wow-delay="2s"  >
-						<a href=""><i class="fa fa-facebook"></i></a>
-						<a href=""><i class="fa fa-twitter"></i></a>
-						<a href=""><i class="fa fa-pinterest"></i></a>
-						<a href=""><i class="fa fa-google-plus"></i></a>
- 					 </div>
- 					<div class="datban call wow heartBeat " data-wow-delay="3s">
- 						Call for reservation: +011 29 345 678
- 					 </div>
- 				</div>
- 				<div class="col-sm-4 ">
- 					<div class="datban openingtop float-sm-right text-sm-left text-xs-center wow flash ">
- 						Opening Hours : 9:00am - 10:00pm
- 					</div>
- 				</div>
- 			</div> <!-- het row -->
- 		</div> <!-- het container -->
- 	</div> <!-- het topheader  -->
- 	<div class="logovamenu wow zoomInRight" data-wow-delay="1.5s" >
-	    <nav class="navbar navbar-light  fontroboto">
-	    	<div class="container">    	
-			      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#mtren">
-			       
-			      </button>
-			      <div class="collapse navbar-toggleable-xs" id="mtren">
-			        <a class="navbar-brand text-xs-center text-sm-left" href="#">
-<!-- 			        	<img src="images/logo.png" alt="">
- -->
+		<!-- Section About -->
+		<section id="about" class="about">
 
-			<!-- aksksksk -->
-	
-		 <div class="quanlyml">
-		 <span class="fname">Đ</span>
-		  <span class="fname" >o</span>
-		   <span class="fname" >à</span>
-		    <span class="fname" >n </span> 
-		    <span class="fname" >x</span> 
-		    <span class="fname" >u</span> 
-		    <span class="fname"  >â</span> 
-		    <span class="fname" >n</span> 
-		    <span class="fname" >P</span> 
-		    <span class="fname"  >h</span>
-		     <span class="fname" >i</span>
-  </div>
-<!-- ekdkdk -->
-
-
-			        </a>
-
-			        <ul class="nav navbar-nav float-md-right">
-			          <li class="nav-item active">
-			            <a class="nav-link" href="index.html">Home  </a>
-			          </li>
-			          <li class="nav-item">
-			            <a class="nav-link" href="about.html">About</a>
-			          </li>
-			          <li class="nav-item">
-			            <a class="nav-link" href="news.html">News</a>
-			          </li>
-			          <li class="nav-item">
-			            <a class="nav-link" href="thucdon.html">Menu</a>
-			          </li>
-			          <li class="nav-item">
-			            <a class="nav-link" href="contact.html">Contact</a>
-			          </li>
-			         <li class="nav-item datbanmenu">
-			            <a class="nav-link btn btn-warning hieung1" data-wow-iteration="3" href="#" >Reservation</a>
-			          </li>
-			        </ul>
-			      </div>
-	      </div> <!-- het container -->
-	    </nav>
- 	</div> <!-- het logo va menu -->
- 	
-<div class="slide wow zoomIn " data-wow-delay="1s" >
- 	<div id="slidehome" data-interval="1000" class="carousel slide slidecon" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#slidehome" data-slide-to="0" class="active"></li>
-				<li data-target="#slidehome" data-slide-to="1"></li>
-				<li data-target="#slidehome" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner" role="listbox">
-				<div class="carousel-item active">
- 							
- 							<div class="chu">
- 								<h2 class=" fontoswarld">The Fresh And Tasty Burgers </h2>
- 								<p  >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  </p>
- 								<a href="" class="nutslide fontoswarld btn btn-warning"> Buy Now</a>
- 							</div>
- 							<img src="images/slide02.jpg" alt="">
- 						</div>
- 						<div class="carousel-item">
- 							<div class="chu m">
- 								<h2 class=" fontoswarld">The Fresh And Tasty Burgers </h2>
- 								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  </p>
- 								<a href="" class="nutslide fontoswarld btn btn-warning"> Buy Now</a>
- 							</div>
- 							<img src="images/01.jpg" alt="">
- 						</div>
- 						<div class="carousel-item">
- 							<div class="chu">
- 								<h2 class=" fontoswarld">The Fresh And Tasty Burgers </h2>
- 								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  </p>
- 								<a href="" class="fontoswarld nutslide btn btn-warning"> Buy Now</a>
- 							</div>
- 							<img src="images/slide02.jpg" alt="">
- 						</div>
- 							<div class="carousel-item">
- 							<div class="chu m">
- 								<h2 class=" fontoswarld">The Fresh And Tasty Burgers </h2>
- 								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque  </p>
- 								<a href="" class="fontoswarld nutslide btn btn-warning"> Buy Now</a>
- 							</div>
- 							<img src="images/01.jpg" alt="">
- 						</div>
+			<div class="section-header">
+				<h2>Giới Thiệu</h2>
+				<!-- <a href="#" class="resume-download" data-toggle="tooltip" data-placement="bottom" title="Download">
+					<i class="fa fa-download" aria-hidden="true"> </i>  Download Resume
+				</a> -->
 			</div>
-			<a class="left carousel-control" href="#slidehome" role="button" data-slide="prev">
-				<span class="icon-prev" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#slidehome" role="button" data-slide="next">
-				<span class="icon-next" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
-		 
 
- 
- 	</div> <!-- het slide  -->
- 	<div class="badichvu">
- 		<div class="container ">
- 			<div class="row">
- 				<div class="col-sm-4 wow flipInY" data-wow-delay="0s">
- 					<a href=""><img src="images/3dichvu.jpg" alt="" class="img-fluid"></a>
- 					<h3><a href="">Our Restaruant Story</a></h3>
- 					<p>Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium thes hatles tooest surf totam rem aperiam.</p>
- 					<a href="" class="readmore">Read More</a>
- 				</div>
-				<div class="col-sm-4 wow flipInY" data-wow-delay="0.7s">
- 					<a href=""><img src="images/3dichvu.jpg" alt="" class="img-fluid"></a>
- 					<h3><a href="">Our Restaruant Story</a></h3>
- 					<p>Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium thes hatles tooest surf totam rem aperiam.</p>
- 					<a href="" class="readmore">Read More</a>
- 				</div>
-				<div class="col-sm-4 wow flipInY" data-wow-delay="1.4s">
- 					<a href=""><img src="images/3dichvu.jpg" alt="" class="img-fluid"></a>
- 					<h3><a href="">Our Restaruant Story</a></h3>
- 					<p>Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium thes hatles tooest surf totam rem aperiam.</p>
- 					<a href="" class="readmore">Read More</a>	
- 				</div>				
- 			</div> <!-- het row -->
- 		</div> <!--  het container -->
- 	</div>  <!-- het badichvu -->
-  	<div class="khoimenu wow fadeInLeft" data-wow-delay="1.2s">  
- 		<div class="tieudekhoimenu text-xs-center">
- 			<div class="container">
- 				<div class="row">
- 					<div class="col-sm-8 push-sm-2">
- 						<span class="tieudephu fontdancing">Our Delicious Menu Items</span>
- 						<h3 class="tieudechinh fontroboto">Fresh And Healthy Food Available</h3>
- 					</div>
- 				</div>
- 			</div>
- 			
- 		</div>   <!-- HET TIEUDEKHOIMENU -->
- 	</div>  <!-- HET KHOI MENU -->
+			<!-- Intro -->
+			<div class="intro">
+				
+				<ul class="info">
+					<li><strong>Ngày sinh:</strong> 29/10/1999</li>
+					<li><strong>Giới tính:</strong> Nam</li>
+					<li><strong>Điện thoại:</strong> doanxuanphi2@gmail.com</li>
+					<li><strong>Phone:</strong>0345329009</li>
+					<li><strong>Quê Quán:</strong>Nam Định</li>
+					<li><strong>Địa chỉ hiện tại:</strong>Số 5 Nguyễn Văn Trỗi, Q. Hà Đông, TP Hà Nội</li>
+				</ul>
 
- 	<div class="thucdonct wow zoomInRight  " data-wow-delay="1.2s" >
- 		<div class="tieudect text-xs-center fontroboto">
- 			<a href="" data-monan="*">All </a>
- 			<a href="" data-monan=".sang">Breakfast</a>
- 			<a href="" data-monan=".trua">Lunch</a>
- 			<a href="" data-monan=".toi">Dinner</a> 
- 		</div>
- 		<div class="noidungct">
- 			 <div class="container">
- 			 	<div class="row nhieumon">
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon sang ">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/1.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh sáng</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon toi">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/2.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh toi</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon trua">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/3.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh trưa</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon sang">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/4.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh sáng</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon trua">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/5.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh trưa</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon toi">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/6.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh toi</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 	 <div class="col-xs-12 col-sm-6 col-md-4   motmon trua">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/2.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh trưa</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon toi">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/4.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh toi</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon toi">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/3.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh toi</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon sang">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/6.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh sáng</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
- 			 		<div class="col-xs-12 col-sm-6 col-md-4   motmon trua">
- 			 			<div class="row">
- 			 				<div class="col-xs-3 col-sm-4">
- 			 					<div class="anhmon">
- 			 						<div class="tagnew">NEW</div>
- 			 						<img src="images/3.jpg" alt="" class="img-fluid">
- 			 					</div>
-
- 			 					
- 			 				</div>
- 			 				<div class="col-xs-9 col-sm-8">
- 			 					<div class="tenmon">
- 			 						<div class="tren">
- 			 							<span class="float-xs-right">$35.50</span>
- 			 							<b class="ten">Gosh trua</b>
- 			 						</div>
- 			 						<div class="duoi">
- 			 							Mussel with tomato sauce, wine
- 			 						</div>
- 			 					</div>
- 			 				</div>
- 			 			</div> <!-- het row -->
- 			 		</div>  <!-- het motmon -->
-
-
- 			 	</div> <!-- het row -->
- 			 </div>  <!-- het container -->
- 			 
- 		</div>  <!-- het noidungct -->
- 	</div>  <!-- HET THUCDONCT -->
-  	<div class="slidemonan  wow fadeInUp" data-wow-delay="1.2s">
- 		<div class="container">
- 			<div class="row">
- 				<div class="col-sm-12">
- 					<h4> Our special Dishes</h4>
- 				</div>
- 			</div>
-
- 			<div class="row">
- 			<div class="col-sm-12">
- 						<div id="slidemonanduoi" data-interval="2000" class="carousel slide" data-ride="carousel">
- 							<ol class="carousel-indicators">
- 								<li data-target="#slidemonanduoi" data-slide-to="0" class="active"></li>
- 								<li data-target="#slidemonanduoi" data-slide-to="1"></li>
- 								<li data-target="#slidemonanduoi" data-slide-to="3"></li>
- 							</ol>
- 							<div class="carousel-inner" role="listbox">
- 								<div class="carousel-item active">
- 									<div class="row">
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										
- 									</div> <!-- het row -->
-
- 								</div>  <!-- HET CAROUSEL ITEM -->
- 								 <div class="carousel-item ">
- 									<div class="row">
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										
- 									</div> <!-- het row -->
-
- 								</div>  <!-- HET CAROUSEL ITEM -->
-								<div class="carousel-item ">
- 									<div class="row">
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										<div class="sanpham">
- 											<img src="images/1.jpg" alt="" class="anhspslide">
- 											<div class="tensp">
- 												<div class="gia float-xs-right">$100</div>
- 												<div class="ten">Trio Sauce</div>
- 											</div>
- 											<div class="tencongthuc">
- 												Mussel with tomato sauce, wine
- 											</div>
- 										</div> <!-- SAN PHAM -->
-
- 										
- 									</div> <!-- het row -->
-
- 								</div>  <!-- HET CAROUSEL ITEM -->
- 								 
- 							</div>
- 							<a class="left carousel-control" href="#slidemonanduoi" role="button" data-slide="prev">
- 								<span class="icon-prev" aria-hidden="true"></span>
- 								<span class="sr-only">Previous</span>
- 							</a>
- 							<a class="right carousel-control" href="#slidemonanduoi" role="button" data-slide="next">
- 								<span class="icon-next" aria-hidden="true"></span>
- 								<span class="sr-only">Next</span>
- 							</a>
- 						</div>
- 				</div> <!-- het colsm12 cu monan -->
- 			</div>  <!-- HET ROW -->
- 		</div> <!-- HET CONTAINER -->
-
- 	</div>  <!-- HET SLIDE MON AN -->
-
-
- 	<div class="gioithieudaubep  wow fadeInUp" data-wow-delay="1.2s">
- 		<div class="container">
- 			<div class="row">
- 				<div class="col-sm-4">
- 					<img src="images/daubepcontact.jpg" alt="" class="img-fluid">
- 				</div>
- 				<div class="col-sm-7 push-sm-1 ">
- 					<div class="thongtin">
- 						<h2 class="fontoswarld">Stevan Smith</h2>
- 						<span class="fontdancing">The Master of Cooking</span>
- 						<p>
- 							Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.
- 						</p>
- 					</div> <!-- het thong tin -->
- 					<div class="daubepcontact">
- 						<a href="" class="icondb"><i class="fa fa-facebook"></i></a>
- 						<a href="" class="icondb"><i class="fa fa-vimeo"></i></a>
- 					</div>
- 				</div>
- 			</div>
- 		</div>
- 	</div><!--  HET GIOI THIEU DAU BEP	 -->
-
-	<div class="sloganhome wow fadeInUp" data-wow-delay="1.2s">
-		<div class="container text-xs-center">
-		 	 <div class="row">
-		 	 	<div class="col-sm-8 push-sm-2">
-		 	 		<h3 class="fontdancing"> Enjoy Pleasant Pastime With Friends and Partners</h3>
-					<span class="fontroboto">Relaxing Atmosphere</span>
-		 	 	</div>
-		 	 </div>
-			
-		</div>
-	</div> <!-- het slogan home  -->
-
-	<div class="khoidatban text-xs-center wow fadeInUp" data-wow-delay="1.2s">
-		<div class="container">
-
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6">
-				<div class="thongtindatban fontroboto">
-					<h2 class="fontroboto">Make A Reservation</h2>
-					<p class="tt ">Booking a table has never been so easy with free   instant online restaurant reservations, booking now!!</p>
-					<p class="giodb">Monday to Friday   <span class="vang"> 9:00 am - 23:00 pm </span> Saturday to Sunday <span class="vang"> 10:00 am - 22:00 pm</span>
-	Note: Arctica Restaurant is closed on holidays.</p>
-					<div class="dtdb fontoswarld">0844.335.1211</div>
-				</div>
 				
 
 			</div>
-			<div class="col-sm-3"></div>
+			<!-- Intro end -->
 
-			<div class="col-sm-10 push-sm-1">
-			
-				<div class="formdatban">
-					<div class="row">
-						<div class="col-sm-12">
-							<h2 class="text-xs-center fontroboto">Book Your Table Online</h2>
+			<!-- Skills -->
+		<!-- 	<div class="skills">
 
-						</div>
-						
-						<div class="col-sm-4">						 
-								<div class="form-group">								 
-									<input type="text" class="form-control" placeholder="Your Name * ">
-								</div>	 
-						</div>
-						<div class="col-sm-4">						 
-								<div class="form-group">								 
-									<input type="email" class="form-control" placeholder="Your Email * ">
-								</div>	 
-						</div>
-						<div class="col-sm-4">						 
-								<div class="form-group">								 
-									<input type="number" class="form-control" placeholder="Your Mobile * ">
-								</div>	 
-						</div>
-						<div class="col-sm-4">						 
-								<div class="form-group">								 
-									<input type="date" class="form-control" placeholder="Date * ">
-								</div>	 
-						</div>
-						
-						<div class="col-sm-4">						 
-								<div class="form-group">								 
-									<input type="time" class="form-control" placeholder="Time * ">
-								</div>	 
-						</div>
-						<div class="col-sm-4">						 
-								<div class="form-group">								 
-									<input type="number" class="form-control" placeholder="No. of person * ">
-								</div>	 
-						</div>
+				<div class="row">
 
-						<div class="col-sm-12 text-xs-center">
-							<a href="
-							" class="btn btn-warning datban2">
-								Book table Now
-							</a>
+					<div class="col-md-6 col-sm-6 col-xs-12 item">
+						<div class="skill-info clearfix">
+							<h3 class="pull-left">Photoshop</h3>
+							<span class="pull-right">90%</span>
 						</div>
-						
-
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="90"
+							aria-valuemin="0" aria-valuemax="100" style="width:90%">
+							</div>
+						</div>
 					</div>
-					 
-				</div> <!-- het form dat ban -->
-			</div>
-		</div> <!-- het row -->
-			
-		</div><!--  het container -->
+
+					<div class="col-md-6 col-sm-6 col-xs-12 item">
+						<div class="skill-info clearfix">
+							<h3 class="pull-left">Illustrator</h3>
+							<span class="pull-right">80%</span>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="80"
+							aria-valuemin="0" aria-valuemax="100" style="width:80%">
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12 item">
+						<div class="skill-info clearfix">
+							<h3 class="pull-left">Indesign</h3>
+							<span class="pull-right">45%</span>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="45"
+							aria-valuemin="0" aria-valuemax="100" style="width:45%">
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-12 item">
+						<div class="skill-info clearfix">
+							<h3 class="pull-left">Corel Draw</h3>
+							<span class="pull-right">60%</span>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" role="progressbar" aria-valuenow="60"
+							aria-valuemin="0" aria-valuemax="100" style="width:60%">
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div> -->
+			<!-- Skills end -->
+		</section>
+		<!-- Section About end -->
+
 		
-	</div>  <!-- HET DAT BAN -->
 
-	<div class="phanhoinguoidung wow  fadeInUp" data-wow-delay="2s">
-		<div class="container">
+		<!-- Section Resume -->
+		<section id="experience" class="resume">
+			
+			<div class="section-header">
+				<h2>Học Vấn</h2>
+				
+			</div>
+
 			<div class="row">
-				<div class="col-sm-10 push-sm-1 text-xs-center">
-					<div id="slidetestimnial" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#slidetestimnial" data-slide-to="0" class="active"></li>
-							<li data-target="#slidetestimnial" data-slide-to="1"></li>
-							<li data-target="#slidetestimnial" data-slide-to="2"></li>
-						</ol>
-						<div class="carousel-inner" role="listbox">
-							<div class="carousel-item active">
-							 	 <i class="fa fa-quote-right"></i>
-							 	 <div class="quote">
-							 	 	We enjoy sharing the projects and posts we make just as much as we enjoy creating them.
- consectetur adipiscing elit, sed do eiusmod tempor incididunt Sit back & take a moment to browse through some of our recent completed work.
-							 	 </div>
-							 	 <b class="fontdancing tennguoi"> Marvel </b>
 
-							</div> 
-							 <div class="carousel-item ">
-							 	 <i class="fa fa-quote-right"></i>
-							 	 <div class="quote">
-							 	 	We enjoy sharing the projects and posts we make just as much as we enjoy creating them.
- consectetur adipiscing elit, sed do eiusmod tempor incididunt Sit back & take a moment to browse through some of our recent completed work.
-							 	 </div>
-							 	 <b class="fontdancing tennguoi"> Marvel </b>
-
-							</div> 
-							<div class="carousel-item ">
-							 	 <i class="fa fa-quote-right"></i>
-							 	 <div class="quote">
-							 	 	We enjoy sharing the projects and posts we make just as much as we enjoy creating them.
- consectetur adipiscing elit, sed do eiusmod tempor incididunt Sit back & take a moment to browse through some of our recent completed work.
-							 	 </div>
-							 	 <b class="fontdancing tennguoi"> Marvel </b>
-
-							</div> 
-							
+				
+				
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="top-item resume-item">
+								<p><span>08/2017 - Hiện Tại</span>
+								<b>Học Viện Công Nghệ Bưu Chính Viễn Thông</b> 
+								</p>
+								<strong>Chuyên Ngành</strong>  : Hệ Thống Thông Tin
+								<br>
+								<strong>GPA</strong>  : 2.41/4
+							</div>
 						</div>
-						 
+						
+					<!-- 	<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="resume-item">
+								<h2>VISUAL / UI DESIGNER</h2>
+								<span>CREATIVE DIRECTOR  |  MARCH'11 - DECEMBER'12</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit maxime laborum sequi, magni earum quo soluta sint velit numquam.</p>
+							</div>
+						</div>
+
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="resume-item">
+								<h2>Click Media</h2>
+								<span>SENIOR UX DESIGNER  |  JULY'09 - APRIL'11</span>
+								<p>Odit maxime laborum sequi, magni earum quo soluta sint velit numquam, ipsum illum! Nostrum possimus illo architecto praesentium ut aliquam dolorem.</p>
+							</div>
+						</div>
+ -->
+					<!-- Page 1 End -->
+
+				
+	
+			</div>
+
+		</section>
+		<!-- Section Resume end -->
+		
+		
+	
+		<!-- Section Resume -->
+		<section id="education" class="resume">
+			
+			<div class="section-header">
+				<h2>MỤC TIÊU NGHỀ NGHIỆP</h2>
+				
+			</div>
+
+			<div class="row">
+
+			
+				
+					
+						<div class="col-md-12 col-sm-12 col-xs-12 ">
+							<div class="resume-item">
+								<!-- <h2>Master Degree Of Design</h2>
+								<span>JANUARY, 2001</span> -->
+								<p>
+	- Không ngừng học hỏi trau dồi kiến thức để hoàn thành tốt nhiệm vụ được giao trong kì thực tập để có cơ hộ trở thành nhân viên chính thức của công ty .<br>
+	- Sau khi thực tập : <br>
+	 	+ Trở thành lập trình viên Java Web chuyên nghiệp trong vòng 1 năm<br>
+	 	+ Trở thành Senior trong lĩnh vực Java web trong 3 đến 5 năm.</p>
+							</div>
+						</div>
+						
+						
+
+					<!-- Page 1 End -->
+
+				
+			
+
+			</div>
+
+		</section>
+		<!-- Section Resume end -->
+	
+		<!-- SecTion Skill-->
+		<!-- -->
+		<section id="skill">
+			<div class="section-header">
+				<h2>Các Kĩ năng </h2> 
+				<div class="ski">
+				<strong> Lập trình :</strong> Nắm chắc Java Core, OOP <br>
+				<strong> JSP servlet / Spring Framework :</strong> Có kiến thức cơ bản về JSP-Servlet, Spring MVC, Spring Boot <br>
+				<strong> Database :</strong> Có kiến thức cơ bản về hệ quản trị cơ sở dữ  liệu Mysql <br>
+				<strong> Tiếng Anh :</strong> Có khả năng đọc hiểu tài liệu Tiếng Anh
+			</div>
+		</div>
+			
+		</section>
+		
+		<!-- end Section Skill -->
+
+
+		<!-- Section Works -->
+		<section id="works" class="works clearfix">
+			
+			<div class="section-header">
+				<h2>Các dự án </h2>
+			</div>
+
+			<!-- Control -->
+			<div class="control">
+				<ul>
+					<li class="active"><a class="filter" data-filter="all">All Projects</a></li>
+					<li><a class="filter" data-filter="1">2019</a></li>
+					<li><a class="filter" data-filter="2">2020</a></li>
+					<li><a class="filter" data-filter="3">2021</a></li>
+					<li><a class="filter" data-filter="4">Video</a></li>
+				</ul>
+			</div>
+
+			<!-- Items Outer -->
+			<div class="item-outer row clearfix">
+				<div class="col-md-4 col-sm-6 col-xs-12 filtr-item" data-category="1" data-sort="value">
+					<div class="item">
+						<a href="assets/images/work1.jpg" class="work-image">
+							<div class="title">
+								<div class="inner">
+									<h2>Project Name</h2>
+									<span>View Details</span>
+								</div>
+							</div>
+						</a>
+						<div class="overlay"></div>
+						<img src="assets/images/work1.jpg" alt="portfolio">
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 col-xs-12 filtr-item" data-category="2" data-sort="value">
+					<div class="item">
+						<a href="hassets/images/work2.jpg" class="work-image">
+							<div class="title">
+								<div class="inner">
+									<h2>Project Name</h2>
+									<span>View Details</span>
+								</div>
+							</div>
+						</a>
+						<div class="overlay"></div>
+						<img src="assets/images/work2.jpg" alt="portfolio">
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 col-xs-12 filtr-item" data-category="1" data-sort="value">
+					<div class="item">
+						<a href="assets/images/work3.jpg" class="work-image">
+							<div class="title">
+								<div class="inner">
+									<h2>Project Name</h2>
+									<span>View Details</span>
+								</div>
+							</div>
+						</a>
+						<div class="overlay"></div>
+						<img src="assets/images/work3.jpg" alt="portfolio">
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 col-xs-12 filtr-item" data-category="2" data-sort="value">
+					<div class="item">
+						<a href="assets/images/work4.jpg" class="work-image">
+							<div class="title">
+								<div class="inner">
+									<h2>Project Name</h2>
+									<span>View Details</span>
+								</div>
+							</div>
+						</a>
+						<div class="overlay"></div>
+						<img src="assets/images/work4.jpg" alt="portfolio">
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 col-xs-12 filtr-item" data-category="3" data-sort="value">
+					<div class="item">
+						<a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/237603952&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" class="work-video">
+							<div class="title">
+								<div class="inner">
+									<h2>Project Name</h2>
+									<span>View Details</span>
+								</div>
+							</div>
+						</a>
+						<div class="overlay"></div>
+						<img src="assets/images/work5.jpg" alt="portfolio">
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6 col-xs-12 filtr-item" data-category="4" data-sort="value">
+					<div class="item">
+						<a href="https://www.youtube.com/watch?v=fZdkJKFwDE0" class="work-video">
+							<div class="title">
+								<div class="inner">
+									<h2>Project Name</h2>
+									<span>View Details</span>
+								</div>
+							</div>
+						</a>
+						<div class="overlay"></div>
+						<img src="assets/images/work6.jpg" alt="portfolio">
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>  <!-- HET PHAN HOI NGUOI DUNG -->
+			
+		</section>
+		<!-- Section Works end -->
 
-	<div class="tintuchome wow   " data-wow-delay="1s">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 text-xs-center wow  flipInY" data-wow-delay="1s">
-					<div class="tdtintuchome">
-						<span class="fontdancing">Our Blog</span>
-						<h2 class="fontroboto">Lastest News Update</h2>
-					</div>
-				</div>
 
-				<div class="col-md-4 col-sm-6 col-xs-12 wow  flipInY" data-wow-delay="2s">
-
-					<div class="mottinchuan">
-						<a href=""><img src="images/f1.jpg" alt=""></a>
-						<a href="" class="tieudetin1 fontoswarld">The Best Tips For Tasty Food</a>
-						<div class="ngaythang1">10 June 2016  by <span class="vang"> Peter Parker</span></div>
-						<p class="fontroboto">Curabitur quas nets lacusets nulat iaculis loremis etis nisle varius vitae seditum fugiatum ligul aliquam qui sequi nets lacusets nulat </p>
-
-						<div class="docthem mb-2">
-							<div class="like float-xs-right fontroboto">
-								<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=2426291797400427&autoLogAppEvents=1"></script>
-    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="100px" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
-							</div>
-							<a href="" class="rm fontroboto">Read More</a>
-						</div>
-					</div>
-				</div> 
-				<div class="col-md-4 col-sm-6 col-xs-12 wow  flipInY" data-wow-delay="2s">
-					<div class="mottinchuan">
-
-						<a href=""><img src="images/f1-03.jpg" alt=""></a>
-						<a href="" class="tieudetin1 fontoswarld">The Best Tips For Tasty Food</a>
-						<div class="ngaythang1">10 June 2016  by <span class="vang"> Peter Parker</span></div>
-						<p class="fontroboto">Curabitur quas nets lacusets nulat iaculis loremis etis nisle varius vitae seditum fugiatum ligul aliquam qui sequi nets lacusets nulat </p>
-
-						<div class="docthem mb-2">
-							<div class="like float-xs-right fontroboto">
-								
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=2426291797400427&autoLogAppEvents=1"></script>
-    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="100px" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
-
-							</div>
-							<a href="" class="rm fontroboto">Read More</a>
-						</div> 
-					</div> 
-
-				</div> 
-				<div class="col-md-4 col-sm-6 col-xs-12 wow  flipInY" data-wow-delay="1s">
-					<div class="mottinchuan">
-
-						<a href=""><img src="images/f1-02.jpg" alt=""></a>
-						<a href="" class="tieudetin1 fontoswarld">The Best Tips For Tasty Food</a>
-						<div class="ngaythang1">10 June 2016  by <span class="vang"> Peter Parker</span></div>
-						<p class="fontroboto">Curabitur quas nets lacusets nulat iaculis loremis etis nisle varius vitae seditum fugiatum ligul aliquam qui sequi nets lacusets nulat </p>
-
-						<div class="docthem mb-2">
-							<div class="like float-xs-right fontroboto">
-								
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=2426291797400427&autoLogAppEvents=1"></script>
-    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="100px" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
-								
-							</div>
-							<a href="" class="rm fontroboto">Read More</a>
-						</div>
-					</div>
-
-				</div> 
-
-			</div>
-		</div>
-
-	</div>  <!-- HET TIN TUC O TRANG HOME -->
-
-	<div class="footertop">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-3 cotf1 mb-2 wow fadeInUp" data-wow-delay="1s">
-					<a href=""><img src="images/logofoot.png" alt="" class="logof"></a>
-					<p>Marsh mallow muffin soufflé jelly-o tart cake Marshmallow macaroon jelly jubes dont tiramisu croissant cake.</p>
-					<div class="motdong">
-						<i class="fa fa-paper-plane-o"></i>
-						<span class="textmd">Address : 44 New Design Street,<br>
-						Melbourne 005</span>
-					</div>
-					<div class="motdong">
-						<i class="fa fa-phone"></i>
-						<span class="textmd">Phone : (01) 800 433 633</span>
-					</div>
-					<div class="motdong">
-						<i class="fa fa-envelope-o"></i>
-						<span class="textmd">Email : info@Example.com</span>
+			<!-- SecTion activity-->
+		<!-- -->
+		<section id="activity">
+			<div class="section-header">
+				<h2>Hoạt Động </h2> <br>
+					<div class="ski">
+				<span> 10/2018-01/2019</span> 
+				<strong> Tham Gia khóa Lập Trình Web cơ bản của trung tâm <a href="https://vietpro.edu.vn/hoc-php-lap-trinh-php">VietPro</a>  </strong> <br>
+				<span> 07/2019-08/2019</span> 
+				<strong> Tham Gia Lớp Ứng dụng  Thuật toán hè SamSung 2019    </strong>
 					</div>
 					
-
-				</div>  <!-- HET COTF1 -->
-				<div class="col-sm-2 push-sm-1 cotf2 mb-2  wow fadeInUp" data-wow-delay="0.5s">
-					<h2 class="tdft">Userfull Link </h2>
-					<ul>
-						<li><a href="">About company </a></li>
-						<li><a href="">Reservation  </a></li>
-						<li><a href="">Help center  </a></li>
-						<li><a href="">Our Blog  </a></li>
-						<li><a href="">Careers  </a></li>
-						<li><a href="">Contact us  </a></li>
-					</ul>
-				</div>  <!-- HET COTF2 -->
-				<div class="col-sm-3  cotf3 mb-2 wow  fadeInUp" data-wow-delay="1.2s">
-					<h2 class="tdft">Userfull Link 2 </h2>
-					<ul>
-						<li><a href="">About company </a></li>
-						<li><a href="">Reservation  </a></li>
-						<li><a href="">Help center  </a></li>
-						<li><a href="">Our Blog  </a></li>
-						<li><a href="">Careers  </a></li>
-						<li><a href="">Contact us  </a></li>
-					</ul>
-				</div>  <!-- HET COTF3 -->
-				<div class="col-sm-3  cotf4 wow  fadeInUp" data-wow-delay="1.5s">
-					<h2 class="tdft">Openning hours </h2>
-					<div class="openning1">
-						<div class="phai float-xs-right">9:00 am - 23:00 pm</div>
-						<div class="trai">Mon — Fri</div>
-					</div>
-					 <div class="openning1">
-						<div class="phai float-xs-right">10:00 am - 23:00 pm</div>
-						<div class="trai">Saturday </div>
-					</div>
-					 <div class="openning1">
-						<div class="phai float-xs-right">10:00 am - 23:00 pm</div>
-						<div class="trai">Sunday   </div>
-					</div>
-					 
-					<p>Note: Arctica Restaurant is closed on holidays.</p>
-				</div>  <!-- HET COTF4 -->
-				
 			</div>
-		</div>
-	</div>  <!-- HET FOOTERTOP -->
+			
+		</section>
+		
+		<!-- end Section actity -->
 
-	<div class="footerbottom text-xs-center fontroboto wow  fadeInUp" data-wow-delay="2s">
-		 Copyrights © 2020  By 
-		 <div class="quanly">
-		 <div class="quanlym">
+
 		
-<span class="fname">Đ</span>
-		  <span class="fname" >o</span>
-		   <span class="fname" >à</span>
-		    <span class="fname" >n </span> 
-		    <span class="fname" >x</span> 
-		    <span class="fname" >u</span> 
-		    <span class="fname"  >â</span> 
-		    <span class="fname" >n</span> 
-		    <span class="fname" >P</span> 
-		    <span class="fname"  >h</span>
-		     <span class="fname" >i</span>
-  </div>
-</div>
- <p>Contact for work Email:Doanxuanphi2@gmail.com </p> 
+
+
+
+
+
+		<!-- Section Testimonials -->
+		<section id="testimonials" class="testimonials">
+			
+			<div class="section-header">
+				<h2>Testimonials</h2>
+			</div>
+
+			<!-- Carousel -->
+			<div class="testimonial-carousel">
+
+				<div class="item">
+					<div class="row">
+						<div class="col-md-2 col-sm-2 hidden-xs">
+							<div class="thumb">
+								<img src="assets/images/testimonial-img1.jpg" alt="testimonial-customer">
+							</div>
+						</div>
+						<div class="text col-md-10 col-sm-10 col-xs-12">
+							<p>Pri diam soluta molestie at, id melius ponderum mel, nominavi adipisci partiendo per te. No usu doctus dolorem liberavisse, vim nusquam invidunt id.</p>
+							<span class="author">- John Doe -</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="row">
+						<div class="col-md-2 col-sm-2 hidden-xs">
+							<div class="thumb">
+								<img src="assets/images/testimonial-img2.jpg" alt="testimonial-customer">
+							</div>
+						</div>
+						<div class="text col-md-10 col-sm-10 col-xs-12">
+							<p>Pri diam soluta molestie at, id melius ponderum mel, nominavi adipisci partiendo per te. No usu doctus dolorem liberavisse, vim nusquam invidunt id.</p>
+							<span class="author">- John Doe -</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="row">
+						<div class="col-md-2 col-sm-2 hidden-xs">
+							<div class="thumb">
+								<img src="assets/images/testimonial-img3.jpg" alt="testimonial-customer">
+							</div>
+						</div>
+						<div class="text col-md-10 col-sm-10 col-xs-12">
+							<p>Pri diam soluta molestie at, id melius ponderum mel, nominavi adipisci partiendo per te. No usu doctus dolorem liberavisse, vim nusquam invidunt id.</p>
+							<span class="author">- John Doe -</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Carousel end -->
+
+		</section>
+		<!-- Section Testimonials end -->
+
+
+			<!-- SecTion favorite-->
+		<!-- -->
+		<section id="favorite">
+			<div class="section-header">
+				<h2>Sở thích </h2> <br>
+					<div class="ski">
+					Chơi đá bóng <br>
+					Chơi Cờ vua
+					
+			</div>
+			
+		</section>
 		
+		<!-- end Section favorite -->
+
+	
+
+		</section>
+		<!-- Section Contact end -->
+
+
+	
+
 	</div>
+	<!-- Main Content end -->
+
+
+<div class="hotline-phone-ring-wrap">		
+			<div class="hotline-phone-ring">
+			<div class="hotline-phone-ring-circle"></div>
+			<div class="hotline-phone-ring-circle-fill"></div>
+			<div class="hotline-phone-ring-img-circle"> <a href="tel:0345329009" class="pps-btn-img"> <img src="https://netweb.vn/img/hotline/icon.png" alt="so dien thoai" width="50"> </a></div>
+		</div>		
+		<div class="hotline-bar"> 
+			<a href="tel:0345329009"> <span class="text-hotline">0345329009</span> </a>
+		</div>			 
+		
+</div>
+
+
+
+<div class="float-icon-hotline">			
+		<ul class ="left-icon hotline">
+			<li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="https://zalo.me/0345329009"><i class="fa fa-zalo animated infinite tada"></i><span>Zalo</span></a></li>
+			<li class="hotline_float_icon"><a target="_blank" rel="nofollow" id="messengerButton" href="https://www.messenger.com/t/100004545765750"><i class="fa fa-messenger animated infinite tada"></i><span>Facebook</span></a></li>
+		</ul>		
+</div>
+
+
+
+</main>
+<!-- Main Wrapper end -->
+
+<!-- SCRIPTS -->
+<script type="text/javascript" src="assets/js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.onepage-scroll.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.filterizr.js"></script>
+<script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="assets/js/custom.js"></script>
+<script type="text/javascript" src="assets/js/smoothscroll.min.js"></script>
 
 </body>
 </html>
