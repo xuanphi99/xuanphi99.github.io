@@ -35,6 +35,11 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Poppins', sans-serif;
 }
 
+h3.collapsed:hover {
+    cursor: pointer;
+    color: #e27d35e3;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -562,6 +567,10 @@ li {
     padding: 0 20px 0 0;
 }
 
+li.active {
+    font-weight: bold;
+}
+
 .works .control ul li a {
     color: #9E9E9E;
     cursor: pointer;
@@ -604,9 +613,9 @@ li {
     height: 193px;
     position: relative;
 }
-
+/* css hover titile img section work  */
 .works .item-outer .item .title {
-    color: #FFF;
+    color: #191415;
     position: absolute;
     top: 0;
     height: 100%;
@@ -1094,6 +1103,10 @@ img {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+i.fa.fa-facebook:hover {
+    color: #3030c5;
 }
 .float-icon-hotline ul li span {
     display: inline-block;

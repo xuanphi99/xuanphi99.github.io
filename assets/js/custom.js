@@ -1,15 +1,20 @@
 /*=========================================================================
-        Preloader
+        Preloader Delay Web
 =========================================================================*/
 $(window).load(function() {
     "use strict";
-    $(".preloader-outer").delay(350).fadeOut('slow');
+    $(".preloader-outer").delay(500).fadeOut('fast');
 });
 
+
+
 $(function(){
-    "use strict";
+
+
+
+    "use strict"; // Use for All Web
     /*=========================================================================
-            One Page Nav
+            One Page Nav Transate to Class predict
     =========================================================================*/
     $(".navigation").onePageNav({
         currentClass: 'current',
@@ -20,20 +25,23 @@ $(function(){
     });
 
     /*=========================================================================
-            Portfolio filter
+            Portfolio filter Toogle Class Of All Project
     =========================================================================*/
       if($('#works .item-outer').length > 0){
         var filterizd = $('#works .item-outer').filterizr();
       }
       $( '.control ul li' ).on( 'click', function() {
+        //click menu All project
             $( this ).parent().find( 'li.active' ).removeClass( 'active' );
             $( this ).addClass( 'active' );
+            console.log("hihihihih");
       });
 
     /*=========================================================================
-            Hamburger Menu & Mobile Push menu
+            Hamburger Menu & Mobile Push menu Click Menu All Project
     =========================================================================*/
     $(".hamburger-menu, .main-nav ul li a").on( 'click', function() {
+      //click side bar
         $(".header").toggleClass("pushed");
         $(".main-content").toggleClass("main-pushed");
         $('.bar').toggleClass('animate');
@@ -72,10 +80,12 @@ $(function(){
     $(".header").css({'height':($(window).height())+'px'});
 
     /*=========================================================================
-            Magnific Popup Functions
+            Magnific Popup Functions click view detail
     =========================================================================*/
     $('.work-image').magnificPopup({
+
       type: 'image'
+      
     });
 
     $('.work-video').magnificPopup({
