@@ -2,6 +2,7 @@
         Preloader Delay Web
 =========================================================================*/
 $(window).load(function() {
+   $(".icon-scroll-top").hide();
     "use strict";
     $(".preloader-outer").delay(500).fadeOut('fast');
 });
@@ -119,5 +120,21 @@ $(function(){
           srcAction: 'iframe_src',
         }
     });
+
+ $(window).scroll(function(event) {
+    var pos_body = $('html,body').scrollTop();
+    if (pos_body>50) {
+      $(".icon-scroll-top").show(400);
+    }
+    else{
+      $(".icon-scroll-top").hide(300);
+    }
+
+  });
+
+    $(".icon-scroll-top").click(function(e) {
+   $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
 
 });
