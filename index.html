@@ -29,8 +29,11 @@
     <![endif]-->
 
 </head>
+ <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<body >
 
-<body>
+
+
 <!-- Preloader -->
 <div class="preloader-outer">
 	<div class="preloader">
@@ -45,9 +48,12 @@
 </div>
 <!-- Preloader end -->
 
+<div id="particles-js" ></div>
+	<script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
+<script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436735/app.js"></script>
 <!-- Main Wrapper -->
-<main class="wrapper">
-
+<main  class="wrapper">
+	
 	<!-- Header -->
 	<header class="header pull-left">
 
@@ -60,7 +66,7 @@
 		<!-- Mobile menu end -->
 		<a href="assets/images/anh34.jpg" class="work-image">
 		<div class="avatar">
-			<img src="assets/images/anh34.jpg" alt="avatar">
+			<img id = "tooltip-1" title = "Click view Img " src="assets/images/anh34.jpg" alt="avatar">
 		</div>
 		</a>
 
@@ -72,7 +78,7 @@
 		<!-- Social Icons -->
 		<div class="social-icons">
 			<ul>
-				<li><a href="https://www.facebook.com/profile.php?id=100004545765750"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.facebook.com/profile.php?id=100004545765750"><i class="fa fa-facebook" aria-hidden="true" id = "tooltip-2" title = "Kết nối FaceBook "></i></a></li>
 				<!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
@@ -136,64 +142,7 @@
 				
 
 			</div>
-			<!-- Intro end -->
-
-			<!-- Skills -->
-		<!-- 	<div class="skills">
-
-				<div class="row">
-
-					<div class="col-md-6 col-sm-6 col-xs-12 item">
-						<div class="skill-info clearfix">
-							<h3 class="pull-left">Photoshop</h3>
-							<span class="pull-right">90%</span>
-						</div>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="90"
-							aria-valuemin="0" aria-valuemax="100" style="width:90%">
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-sm-6 col-xs-12 item">
-						<div class="skill-info clearfix">
-							<h3 class="pull-left">Illustrator</h3>
-							<span class="pull-right">80%</span>
-						</div>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="80"
-							aria-valuemin="0" aria-valuemax="100" style="width:80%">
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-sm-6 col-xs-12 item">
-						<div class="skill-info clearfix">
-							<h3 class="pull-left">Indesign</h3>
-							<span class="pull-right">45%</span>
-						</div>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="45"
-							aria-valuemin="0" aria-valuemax="100" style="width:45%">
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-6 col-sm-6 col-xs-12 item">
-						<div class="skill-info clearfix">
-							<h3 class="pull-left">Corel Draw</h3>
-							<span class="pull-right">60%</span>
-						</div>
-						<div class="progress">
-							<div class="progress-bar" role="progressbar" aria-valuenow="60"
-							aria-valuemin="0" aria-valuemax="100" style="width:60%">
-							</div>
-						</div>
-					</div>
-
-				</div>
-
-			</div> -->
+	
 			<!-- Skills end -->
 		</section>
 		<!-- Section About end -->
@@ -223,23 +172,7 @@
 							</div>
 						</div>
 						
-					<!-- 	<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="resume-item">
-								<h2>VISUAL / UI DESIGNER</h2>
-								<span>CREATIVE DIRECTOR  |  MARCH'11 - DECEMBER'12</span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit maxime laborum sequi, magni earum quo soluta sint velit numquam.</p>
-							</div>
-						</div>
-
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="resume-item">
-								<h2>Click Media</h2>
-								<span>SENIOR UX DESIGNER  |  JULY'09 - APRIL'11</span>
-								<p>Odit maxime laborum sequi, magni earum quo soluta sint velit numquam, ipsum illum! Nostrum possimus illo architecto praesentium ut aliquam dolorem.</p>
-							</div>
-						</div>
- -->
-					<!-- Page 1 End -->
+			
 
 				
 	
@@ -394,9 +327,7 @@
 				
 				<div class="col-md-6 col-sm-6 col-xs-12 filtr-item" data-category="3" data-sort="value">
 					<div class="item">
-					<!-- 	<a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/237603952&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true" class="work-video">
-							<div class="title">
-								<div class="inner"> -->
+				
 									<h3 data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Game Solitaire đối kháng trực tiếp</h3>
 									
 									<div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordion">
@@ -495,6 +426,8 @@
 	</div>
 	<!-- Main Content end -->
 
+	
+
 
 <div class="hotline-phone-ring-wrap">		
 			<div class="hotline-phone-ring">
@@ -518,11 +451,13 @@
 </div>
 
 
-
-</main>
+</main> 
 <!-- Main Wrapper end -->
 
-<div class="icon-scroll-top">BackToTop</div>
+<div class="icon-scroll-top" >BackToTop</div>
+
+
+
 
 
 
@@ -532,6 +467,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
+
 
 <script type="text/javascript" src="assets/js/jquery-1.12.3.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.onepage-scroll.min.js"></script>
@@ -543,6 +479,8 @@
 <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="assets/js/custom.js"></script>
 <script type="text/javascript" src="assets/js/smoothscroll.min.js"></script>
+
+
 
 </body>
 </html>
