@@ -164,7 +164,7 @@ $(function(){
         //click menu All project
             $( this ).parent().find( 'li.active' ).removeClass( 'active' );
             $( this ).addClass( 'active' );
-            console.log("hihihihih");
+          
       });
 
     /*=========================================================================
@@ -175,7 +175,6 @@ $(function(){
         $(".header").toggleClass("pushed");
         $(".main-content").toggleClass("main-pushed");
         $('.bar').toggleClass('animate');
-        console.log("hihihihi");
     });
 
     /*=========================================================================
