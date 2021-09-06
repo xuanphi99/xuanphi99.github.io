@@ -48,14 +48,15 @@ body {
     bottom: 0px;
     position: fixed;
     right: 0px;
-    background: #8854cc;
+    /* background: #8854cc; */
     width: 123px;
+    color: wheat;
+    font-weight: bold;
     font-size: 18px;
     margin-bottom: 20px;
     margin-right: 20px;
     padding: 10px;
     border-radius: 50%;
-    
 }
 
 .icon-scroll-top:hover {
@@ -559,7 +560,7 @@ li {
 .resume .resume-item {
     /* background: #FFF; */
     margin-top: 30px;
-    max-height: 140px;
+    max-height: auto;
     overflow: hidden;
 }
 
@@ -933,6 +934,7 @@ li.active {
 /*                      RESPONSIVE                                  */
 /*-----------------------------------------------------------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+    *{}
     .works .item-outer .mix {
         width: 50%;
     }
@@ -978,6 +980,16 @@ li.active {
 }
 
 @media only screen and (max-width: 767px) {
+    .icon-scroll-top {
+    padding: 11px;
+    margin: 0px;
+    border: none;
+    background:none;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 0%;
+    width: auto;
+}
     .welcome {
         padding: 60px !important;
     }
